@@ -57,7 +57,7 @@
     }
     bool entity::canuserage ()const
     {
-        return (rage>=rageneed);
+        return (rage>=rageneed - 1);
     }
     void entity:: resetrage()
     {
