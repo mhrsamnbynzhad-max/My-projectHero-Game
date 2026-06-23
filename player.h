@@ -23,6 +23,7 @@ class Player : public entity
     skill ragesk;
     string ragesentence;
     int specialcooldown = 0 ;
+    int LastBulletDamage = 55;
 
     
     public:
@@ -42,6 +43,8 @@ class Player : public entity
       bool canspecial()const;
       void setspecialcooldown(int );
       void tickspecialcooldown();
+      int getlastbulletdamage()const ;
+      void setlastbulletdamage(int) ;
 
 };
 

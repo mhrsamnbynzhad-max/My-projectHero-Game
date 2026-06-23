@@ -251,14 +251,17 @@ void Battle :: chooseteam(vector<Player>& team , int teamnum , const vector<Play
         
         if(selected.name == "Last Bullet")
         {
-            int  dmg = 55;
+            int  dmg = attackers[attackerindex].getlastbulletdamage();
             defenders[targetindex].damage(dmg);
+            cout<<"Last Bullet nit  : "<<dmg<< endl;
+
           if(!defenders[targetindex].isalive())
           {
-            dmg = dmg*2;
-            defenders[targetindex].damage(dmg);
+              if(dmg<220)
+              {
+                attackers[attackerindex].setlastbulletdamage(dmg*2);
+              }
           }
-                cout<<"Last Bullet nit  : "<<dmg<< endl;
                 continue;
 
         }

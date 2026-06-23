@@ -85,6 +85,16 @@ skill :: skill(string n , int dmg , int cost , bool sp , skilltype t )
         }
       }
 
+     int Player :: getlastbulletdamage()const 
+     {
+      return LastBulletDamage;
+
+     }
+      void Player :: setlastbulletdamage(int v) 
+      {
+        LastBulletDamage = v ;
+
+      }
      
 
 
